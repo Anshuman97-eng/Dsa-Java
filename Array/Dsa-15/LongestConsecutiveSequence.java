@@ -1,4 +1,5 @@
 // HashSet Pattern (Longest Consecutive Sequence)
+// Use a HashSet to find the start of each consecutive sequence and count its length efficiently.
 
 import java.util.HashSet;
 
