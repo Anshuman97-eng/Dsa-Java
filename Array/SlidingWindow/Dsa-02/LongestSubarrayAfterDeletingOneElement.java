@@ -1,16 +1,16 @@
 // Pattern: Sliding Window
-// Question: Maximum Consecutive Ones III
+// Question: Longest Subarray of 1's After Deleting One Element
 //
 // Explanation:
 // Given a binary array,
-// you can flip at most k zeros into 1's.
+// delete exactly one element.
 //
 // Find the longest consecutive
-// sequence of 1's.
+// sequence of 1's after deletion.
 
-public class MaximumConsecutiveOnesIII {
+public class LongestSubarrayAfterDeletingOneElement {
 
-    public static int longestOnes(int[] nums, int k) {
+    public static int longestSubarray(int[] nums) {
 
         // Initialize variables
         int left = 0;
@@ -26,19 +26,16 @@ public class MaximumConsecutiveOnesIII {
             }
 
             // Shrink window if invalid
-            while (zeros > k) {
-
-                // Update condition
-                if(nums[left] == 0){
+            while (zeros > 1) {
+                if(nums[left] == 0 ){
                     zeros--;
                 }
-
+                // Update condition
                 left++;
             }
 
-            longest = Math.max(longest, right-left);
-
             // Update answer
+            longest = Math.max(longest, right - left);
         }
 
         return longest;
@@ -46,11 +43,9 @@ public class MaximumConsecutiveOnesIII {
 
     public static void main(String[] args) {
 
-        int[] nums = {1,1,1,0,1};
+        int[] nums = {1,1,1,1,0,1};
 
-        int k = 1;
-
-        int result = longestOnes(nums, k);
+        int result = longestSubarray(nums);
 
         System.out.println(result);
     }
