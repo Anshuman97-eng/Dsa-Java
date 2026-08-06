@@ -24,7 +24,6 @@ public class TrappingRainWater {
         int[] prefix = new int[n];
         int[] suffix = new int[n];
         int water =0;
-
         prefix[0] = height[0];
         for(int i=1 ; i<n ; i++){
             prefix[i] = Math.max(prefix[i-1], height[i]);
