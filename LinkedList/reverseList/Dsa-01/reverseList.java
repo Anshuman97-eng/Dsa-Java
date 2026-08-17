@@ -1,4 +1,4 @@
-class Main {
+class reverseList {
 
     static class Node {
         int data;
@@ -10,7 +10,7 @@ class Main {
         }
     }
 
-    public static Node reverseList(Node head) {
+    public static Node reverseLists(Node head) {
 
         Node prev = null;
         Node curr = head;
@@ -36,7 +36,7 @@ class Main {
         head.next.next.next = new Node(4);
         head.next.next.next.next = new Node(5);
 
-        head = reverseList(head);
+        head = reverseLists(head);
 
         Node temp = head;
 
