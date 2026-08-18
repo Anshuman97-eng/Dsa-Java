@@ -37,7 +37,7 @@ class reverseBetween {
         before.next = prev;
         first.next =  curr;
 
-        return head;
+        return dummy.next;
 
     }
 
