@@ -33,7 +33,7 @@ class MaxStack {
         // TODO: push x into stack
         stack.push(x);
         // TODO: if maxStack empty OR x >= maxStack.peek(), push x into maxStack too
-        if(maxStack.isEmpty() || maxStack.peek() < x){
+        if(maxStack.isEmpty() || maxStack.peek() <= x){
             maxStack.push(x);
         }
     }
