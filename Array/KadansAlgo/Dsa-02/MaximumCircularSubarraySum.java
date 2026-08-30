@@ -57,8 +57,8 @@ public class MaximumCircularSubarraySum {
                 currentMax = Math.max(nums[i], currentMax + nums[i]);
                 maxSum = Math.max(maxSum, currentMax);
 
-                currentMin = Math.min(nums[i] , currentMax + nums[i]);
-                minSum = Math.min(minSum, currentMin + nums[i]);
+                currentMin = Math.min(nums[i], currentMin + nums[i]);
+                minSum = Math.min(minSum, currentMin);
             }
         }
 
