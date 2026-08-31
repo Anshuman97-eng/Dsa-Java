@@ -1,11 +1,11 @@
 // Question: Search Insert Position (LeetCode 35)
 public class SearchInsertPosition {
     public static int searchInsert(int[] nums, int target) {
-        int low = 0, high = nums.length - 1;
+        int lower = 0, high = nums.length - 1;
 
-        while (low <= high) {
+        while (lower <= high) {
             // 👉 write your binary search logic here
-            int mid = low + (high - low)/2;
+            int mid = lower + (high - lower)/2;
 
             if(nums[mid] == target){
                 return mid;
@@ -14,11 +14,11 @@ public class SearchInsertPosition {
             if(nums[mid] > target){
                 high = mid - 1;
             }else{
-                low = mid+1;
+                lower = mid+1;
             }
         }
 
-        return low; //  placeholder
+        return lower; //  placeholder
     }
 
     public static void main(String[] args) {
