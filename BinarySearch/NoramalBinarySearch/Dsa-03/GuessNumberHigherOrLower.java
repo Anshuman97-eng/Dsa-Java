@@ -21,7 +21,7 @@ public class GuessNumberHigherOrLower {
             }else if(res < 0){
                 high = mid - 1;
             }else{
-                low = low + 1;
+                low = mid + 1;
             }
 
         }
