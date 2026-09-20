@@ -33,4 +33,6 @@ class TopKFrequentWords {
         List<String> result = sol.topKFrequent(words, k);
         System.out.println("Top " + k + " frequent words: " + result);
     }
+
+    // +ve -> b come first and if -ve then a come first .
 }
